@@ -1,8 +1,20 @@
-* {
+/* Definisi variabel di root */
+:root {
+    --bg-color: #E8F5E9;
+    --form-bg-color: white;
+    --button-bg-color: #388E3C;
+    --button-hover-bg-color: #2E7D32;
+    --text-color: #333;
+    --input-border-color: #ccc;
+    --font-family: Arial, sans-serif;
+}
+
+/* CSS yang menggunakan variabel root */
+* { 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
 }
 
 body {
@@ -10,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #E8F5E9;
+    background-color: var(--bg-color);
     margin: 0;
 }
 
@@ -21,7 +33,7 @@ body {
 }
 
 .contact-form {
-    background-color: white;
+    background-color: var(--form-bg-color);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -30,12 +42,12 @@ body {
 .contact-form h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .contact-form label {
     font-size: 0.9rem;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 5px;
     display: block;
 }
@@ -46,7 +58,7 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border-color);
     border-radius: 4px;
     font-size: 1rem;
 }
@@ -72,7 +84,7 @@ body {
 .contact-form button {
     width: 100%;
     padding: 10px;
-    background-color: #388E3C;
+    background-color: var(--button-bg-color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -82,7 +94,7 @@ body {
 }
 
 .contact-form button:hover {
-    background-color: #2E7D32;
+    background-color: var(--button-hover-bg-color);
 }
 
 @media (max-width: 768px) {
